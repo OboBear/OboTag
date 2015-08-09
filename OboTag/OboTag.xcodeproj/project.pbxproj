@@ -14,7 +14,8 @@
 		180BE8C81B7504BB004EA0BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180BE8C71B7504BB004EA0BD /* Images.xcassets */; };
 		180BE8CB1B7504BB004EA0BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180BE8C91B7504BB004EA0BD /* LaunchScreen.xib */; };
 		180BE8D71B7504BB004EA0BD /* OboTagTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 180BE8D61B7504BB004EA0BD /* OboTagTests.m */; };
-		180BE8E51B75060D004EA0BD /* TagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 180BE8E31B75060D004EA0BD /* TagCell.m */; };
+		180BE8E51B75060D004EA0BD /* ObTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 180BE8E31B75060D004EA0BD /* ObTagCell.m */; };
+		180BE8EE1B76E5A9004EA0BD /* ObTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180BE8ED1B76E5A9004EA0BD /* ObTagView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +42,10 @@
 		180BE8D01B7504BB004EA0BD /* OboTagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OboTagTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		180BE8D51B7504BB004EA0BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		180BE8D61B7504BB004EA0BD /* OboTagTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OboTagTests.m; sourceTree = "<group>"; };
-		180BE8E21B75060D004EA0BD /* TagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagCell.h; sourceTree = "<group>"; };
-		180BE8E31B75060D004EA0BD /* TagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagCell.m; sourceTree = "<group>"; };
+		180BE8E21B75060D004EA0BD /* ObTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObTagCell.h; sourceTree = "<group>"; };
+		180BE8E31B75060D004EA0BD /* ObTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObTagCell.m; sourceTree = "<group>"; };
+		180BE8EC1B76E5A9004EA0BD /* ObTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObTagView.h; sourceTree = "<group>"; };
+		180BE8ED1B76E5A9004EA0BD /* ObTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObTagView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +87,7 @@
 		180BE8B91B7504BB004EA0BD /* OboTag */ = {
 			isa = PBXGroup;
 			children = (
-				180BE8E21B75060D004EA0BD /* TagCell.h */,
-				180BE8E31B75060D004EA0BD /* TagCell.m */,
+				180BE8EF1B76E5CB004EA0BD /* ObTagView */,
 				180BE8BE1B7504BB004EA0BD /* AppDelegate.h */,
 				180BE8BF1B7504BB004EA0BD /* AppDelegate.m */,
 				180BE8C11B7504BB004EA0BD /* ViewController.h */,
@@ -122,6 +124,17 @@
 				180BE8D51B7504BB004EA0BD /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		180BE8EF1B76E5CB004EA0BD /* ObTagView */ = {
+			isa = PBXGroup;
+			children = (
+				180BE8E21B75060D004EA0BD /* ObTagCell.h */,
+				180BE8E31B75060D004EA0BD /* ObTagCell.m */,
+				180BE8EC1B76E5A9004EA0BD /* ObTagView.h */,
+				180BE8ED1B76E5A9004EA0BD /* ObTagView.m */,
+			);
+			name = ObTagView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,7 +237,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				180BE8E51B75060D004EA0BD /* TagCell.m in Sources */,
+				180BE8EE1B76E5A9004EA0BD /* ObTagView.m in Sources */,
+				180BE8E51B75060D004EA0BD /* ObTagCell.m in Sources */,
 				180BE8C31B7504BB004EA0BD /* ViewController.m in Sources */,
 				180BE8C01B7504BB004EA0BD /* AppDelegate.m in Sources */,
 				180BE8BD1B7504BB004EA0BD /* main.m in Sources */,
@@ -422,6 +436,7 @@
 				180BE8DC1B7504BB004EA0BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		180BE8DD1B7504BB004EA0BD /* Build configuration list for PBXNativeTarget "OboTagTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +445,7 @@
 				180BE8DF1B7504BB004EA0BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

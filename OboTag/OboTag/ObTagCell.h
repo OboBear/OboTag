@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TagCell : UIButton
+@interface ObTagCell : UIButton
 
 - (id)initWithTitle:(NSString *)title;
 

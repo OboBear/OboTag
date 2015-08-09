@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 OboTag. All rights reserved.
 //
 
-#import "TagCell.h"
+#import "ObTagCell.h"
 
-@implementation TagCell
+@implementation ObTagCell
 
 - (id)initWithTitle:(NSString *)title
 {
@@ -16,7 +16,7 @@
         
         UIFont *font = [UIFont fontWithName:nil size:14];
         
-        CGRect rect = [TagCell getFontSizeWithString:title withFont:font withMaxWidth:MAXFLOAT withMaxHeight:MAXFLOAT];
+        CGRect rect = [ObTagCell getFontSizeWithString:title withFont:font withMaxWidth:MAXFLOAT withMaxHeight:MAXFLOAT];
         
         self.titleShowLable = [[UILabel alloc]initWithFrame:CGRectMake(20, 10, rect.size.width, rect.size.height)];
         
