@@ -17,15 +17,26 @@
 {
     NSMutableArray          *arrayChoosedTags;
     NSMutableArray          *arrayOptionTags;
+    NSMutableArray          *arrayColor;
 }
 
 - (id) initWithFrame:(CGRect)frame withOptionTags:(NSMutableArray *)optionString withChoosedTags:(NSMutableArray *)choosedString
 {
     if([super initWithFrame:frame])
     {
+        [self initPreDatas];
         [self initContentViewWithOptionTags:optionString withChoosedTags:choosedString];
     }
     return self;
+}
+
+- (void)initPreDatas
+{
+    arrayColor = [[NSMutableArray alloc]initWithArray:@[
+                                                        [UIColor colorWithRed:255/255.0 green:200/255.0 blue:160/255.0 alpha:1],
+                                                        [UIColor colorWithRed:199/255.0  green:230/255.0  blue:220/255.0  alpha:1],
+                                                        [UIColor colorWithRed:200/255.0  green:190/255.0  blue:240/255.0  alpha:1]
+                                                        ]];
 }
 
 - (void) initContentViewWithOptionTags:(NSMutableArray *)optionString withChoosedTags:(NSMutableArray *)choosedString
@@ -38,6 +49,7 @@
         tagCell.titleShowLable.textColor = [UIColor blackColor];
         
         [tagCell addTarget:self action:@selector(tagClickAction:) forControlEvents:UIControlEventTouchUpInside];
+        tagCell.backgroundColor = [arrayColor objectAtIndex:rand()%[arrayColor count]];
         [arrayChoosedTags addObject:tagCell];
         [self addSubview:tagCell];
     }
@@ -132,7 +144,7 @@
 
 
 
-#pragma mark-----ClickAction-----
+#pragma mark------ClickAction-----
 
 - (void) tagClickAction:(ObTagCell *)sender
 {
@@ -141,16 +153,20 @@
     {
         [arrayChoosedTags removeObject:sender];
         [arrayOptionTags addObject:sender];
+        sender.backgroundColor = [UIColor clearColor];
     }
     else if([arrayOptionTags containsObject:sender])
     {
         [arrayOptionTags removeObject:sender];
         [arrayChoosedTags addObject:sender];
+        sender.backgroundColor = [arrayColor objectAtIndex:rand()%[arrayColor count]];
     }
     
     [self resetPosition];
 }
 
+
+#pragma mark------getResult-----
 - (NSMutableArray *)getResultChoosedTags
 {
     

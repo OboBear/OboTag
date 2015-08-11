@@ -26,8 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSMutableArray *optionString = [NSMutableArray arrayWithArray:@[@"美食", @"音乐",@"code4app"]];
-    NSMutableArray *choosedString = [NSMutableArray arrayWithArray:@[@"uuu1993",@"书画",@"obo",@"标签"]];
+    NSMutableArray *optionString    = [NSMutableArray arrayWithArray:@[@"美食", @"音乐",@"code4app"]];
+    NSMutableArray *choosedString   = [NSMutableArray arrayWithArray:@[@"uuu1993",@"书画",@"obo",@"标签"]];
     
     obTagView = [[ObTagView alloc]initWithFrame:self.view.frame withOptionTags:optionString withChoosedTags:choosedString];
     [self.view addSubview:obTagView];
